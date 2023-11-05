@@ -12,7 +12,13 @@ $filtered = array(
   'description' => mysqli_real_escape_string($conn, $_POST['description'])
 );
 
-$sql = "
+if ($filtered['name'] == null || $filtered['description'] == null) {
+  echo '아무것도 입력하지 않았습니다. <a href="../index.php">홈으로 돌아가기.</a>';
+  echo mysqli_error($conn);
+  error_log(mysqli_errno($conn));
+  ini_set('display_errors', '0');
+} else {
+  $sql = "
   INSERT INTO creature(name, description, created,user)
   VALUES(
     '{$filtered['name']}',
@@ -21,6 +27,7 @@ $sql = "
     'test'
   )
 ";
+}
 
 $result = mysqli_query($conn, $sql);
 
