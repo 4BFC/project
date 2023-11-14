@@ -9,10 +9,12 @@
 
 <body>
   <h1>Create</h1>
-  <form action="process_create.php">
+  <form action="process_create.php" method="POST">
     <p>title</p>
     <!--  -->
     <p><input type="text" name="title"></p>
+    <p>day</p>
+    <p><input type="text" name="day"></p>
     <p>description</p>
     <!--  -->
     <p><textarea name="description" id="" cols="30" rows="10"></textarea></p>

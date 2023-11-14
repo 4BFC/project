@@ -40,7 +40,6 @@ if (isset($_GET['id'])) { //URL에 해당 id값을 가지고 있을시에 TRUE �
 
   $escaped['name'] = htmlspecialchars($row['name']);
   $escaped['description'] = htmlspecialchars($row['description']);
-
   $form_creature = './update/process_update.php';
   $form_id = '<input type="hidden" name="id" value="' . $_GET['id'] . '">'; //id값을 전달하기 위함 -> process_update-author.php로 전달 후 처리
   //' . $_GET['id'] . '는 PHP에서 문자열을 생성하고 조합하는 방법입니다. 이것은 문자열 연결(Concatenation)을 수행하는 코드이다.
