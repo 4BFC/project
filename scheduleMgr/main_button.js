@@ -11,14 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   edit_btn.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      // e.preventDefault();
       let n = btnArray.indexOf(e.currentTarget)
       console.log('edit');
-      if (btn.value == 'edit') {
-        btn.value = 'save';
+      if (btn.innerText == 'edit') {
+        btn.innerText = 'save';
         get_event.edit_execute(n);
 
-      } else if (btn.value !== 'edit') {
-        btn.value = 'edit';
+      } else if (btn.innerText !== 'edit') {
+        btn.type = 'submit';
+        btn.innerText = 'edit';
         get_event.save_execute(n);
       }
     })
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   delete_btn.forEach((btn) => {
     btn.addEventListener('click', () => {
       console.log('delete');
-      event.save_execute();
+      get_event.save_execute();
     })
   })
 })

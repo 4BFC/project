@@ -16,7 +16,7 @@ try {
   );
 
   $sql = "
-  INSERT INTO scheduleMgr(user, create_date, title, day,description)
+  INSERT INTO schedulemgr(user, create_date, title, day,description)
   VALUES(
     'tester',
     NOW(),

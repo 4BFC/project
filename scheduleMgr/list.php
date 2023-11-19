@@ -16,6 +16,14 @@ $conn = mysqli_connect(
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<!-- update area -->
+
+<?php
+$form_update = './process/update/process_update.php'
+?>
+
+
+<!-- list area -->
 
 <body>
   <h1>Schedule_list</h1>
@@ -25,12 +33,14 @@ $conn = mysqli_connect(
     <th>title</th>
     <th>date</th>
     <th>description</th>
+
     <?php
     $sql = "SELECT * FROM schedulemgr";
     $result = mysqli_query($conn, $sql);
     if ($row = mysqli_fetch_array($result)) {
       while ($row = mysqli_fetch_array($result)) {
         $filtered = array(
+          'id' => htmlspecialchars($row['id']),
           'user' => htmlspecialchars($row['user']),
           'day' => htmlspecialchars($row['day']),
           'title' => htmlspecialchars($row['title']),
@@ -38,15 +48,21 @@ $conn = mysqli_connect(
           'description' => htmlspecialchars($row['description'])
         );
     ?>
-        <tr>
-          <td><?= $filtered['user'] ?></td>
-          <td><?= $filtered['day'] ?></td>
-          <td id="title"><?= $filtered['title'] ?></td>
-          <td><?= $filtered['date'] ?></td>
-          <td id="description"><?= $filtered['description'] ?></td>
-          <td><input type="button" name="edit" class="edit_btn" value="edit"></td>
-          <td><input type="button" name="delete" class="delete_btn" value="delete"></td>
-        </tr>
+        <form action="<?= $form_update ?>" method="POST">
+          <tr>
+            <td><?= $filtered['id'] ?></td>
+            <td><?= $filtered['user'] ?></td>
+            <td><?= $filtered['day'] ?></td>
+            <td id="title"><?= $filtered['title'] ?></td>
+            <td><?= $filtered['date'] ?></td>
+            <td id="description"><?= $filtered['description'] ?></td>
+            <td>
+              <!-- <input type="button" value="edit"> -->
+              <a name="edit" class="edit_btn" href="./list.php?id=<?= $filtered['id'] ?>">edit</a>
+            </td>
+            <td><input type="button" name="delete" class="delete_btn" value="delete"></td>
+          </tr>
+        </form>
     <?php
       }
     } ?>
