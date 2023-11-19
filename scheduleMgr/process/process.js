@@ -1,4 +1,4 @@
-import * as get_function from "./event_function_refactoring.js";
+import * as get_function from "./event_function.js";
 // import * as get_function from "./event_function.js";
 //-------------------------------------------------- get_id_area
 let btn_execute = document.querySelector('#edit_btn');

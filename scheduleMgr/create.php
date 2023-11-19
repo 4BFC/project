@@ -21,7 +21,7 @@
     <input type="submit" value="create">
   </form>
   <a href="index.php">Home</a>
-  <a href="">NULL</a>
+  <a href="./list.php">My list</a>
 </body>
 
 </html>
