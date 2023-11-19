@@ -3,7 +3,6 @@ import * as get_event from "./process/event_function.js"
 let edit_btn = document.querySelectorAll('.edit_btn');
 let delete_btn = document.querySelectorAll('.delete_btn');
 
-let change_btn = true;
 let btnArray = [...edit_btn]
 //현재 여기서 문제는 event_function.js 속에 있다. variable.js안에 있는 querySelectAll로 지정되었는 상황에서 createElement를 수행하기 어렵다. 이부분을 극복하기 위해서 NodeList를 사용해야한다.
 
@@ -32,7 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 })
-
-
 
 //querySelectAll을 이용한 forEach : https://developer.mozilla.org/ko/docs/Web/API/Document/querySelectorAll
