@@ -18,19 +18,16 @@
     </tr>
     <!-- 2nd row -->
     <tr>
-      <td id="title">1st : title_Null
-        <!-- hidden으로 변경해서.. 보였다 없앴다 하는것이 좋으까? -->
-        <input type="hidden" value="test">
-      </td>
+      <td id="title">1st : title_Null</td>
       <td id="description">1st : description_Null</td>
       <td><input id="edit_btn" type="button" value="edit"></td>
       <td><input type="button" value="delete"></td>
     </tr>
     <!-- 2nd row -->
     <tr>
-      <td>2nd : title_Null</td>
-      <td>2nd : description_Null</td>
-      <td><input type="button" value="edit"></td>
+      <td id="title">2nd : title_Null</td>
+      <td id="description">2nd : description_Null</td>
+      <td><input id="edit_btn" type="button" value="edit"></td>
       <td><input type="button" value="delete"></td>
     </tr>
   </table>
