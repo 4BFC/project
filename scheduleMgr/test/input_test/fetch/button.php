@@ -28,7 +28,7 @@ $conn = mysqli_connect(
     <input type="submit" class="btn" value="Click!">
   </form>
 
-  <script src="./data.js"></script>
+  <script src="./test/data.js" type="module"></script>
 </body>
 
 </html>
