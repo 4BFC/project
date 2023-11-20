@@ -1,4 +1,4 @@
-import * as get_event from "./process/event_function.js"
+import * as get_event from "./protocol/event_function.js"
 
 let edit_btn = document.querySelectorAll('.edit_btn');
 let delete_btn = document.querySelectorAll('.delete_btn');
@@ -11,16 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   edit_btn.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      // e.preventDefault();
       let n = btnArray.indexOf(e.currentTarget)
       console.log('edit');
-      if (btn.innerText == 'edit') {
-        btn.innerText = 'save';
+      if (btn.value == 'edit') {
+        btn.value = 'save';
         get_event.edit_execute(n);
 
-      } else if (btn.innerText !== 'edit') {
-        btn.type = 'submit';
-        btn.innerText = 'edit';
+      } else if (btn.value !== 'edit') {
+        btn.value = 'edit';
         get_event.save_execute(n);
       }
     })
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   delete_btn.forEach((btn) => {
     btn.addEventListener('click', () => {
       console.log('delete');
-      get_event.save_execute();
+      event.save_execute();
     })
   })
 })

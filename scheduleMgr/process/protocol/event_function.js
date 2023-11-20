@@ -22,12 +22,8 @@ export let edit_execute = (n) => {
   //property
   get_id.title_create.type = "text";
   get_id.description_create.type = "text";
-
   get_id.title_create.id = "input_title"
   get_id.description_create.id = "input_description";
-
-  get_id.title_create.name = "title";
-  get_id.description_create.name = "description";
 
 }
 
@@ -39,10 +35,6 @@ export let save_execute = (n) => {
   let title_create_id = document.querySelector('#input_title');
   let description_create_id = document.querySelector('#input_description');
 
-  //비동기가 필요할 듯 promise
-  get_id.title_create.name = "title";
-  get_id.description_create.name = "description";
-
   //delete
   if (title_create_id) { title_create_id.remove(); }
   if (description_create_id) { description_create_id.remove(); }
@@ -51,6 +43,31 @@ export let save_execute = (n) => {
   get_id.description[n].innerText = description_create_id.value;
 }
 
-//macro_function
+//macro
+export let m_edit_execute = () => {
+  console.log("check!");
+
+  // get_id.change_btn(false);
+
+  // bring_the text value
+  get_id.title_create.value = get_id.title.innerText; // title
+  get_id.description_create.value = get_id.description.innerText; // description
+
+  //delete -> 직접 삭제를 하는 경우 table 자체가 삭제가 되기 때문에 원하는 형식으로 생성되지 않는다.
+  get_id.title.innerText = "";
+  get_id.description.innerText = "";
+
+  //append
+  get_id.title.appendChild(get_id.title_create);
+  get_id.description.appendChild(get_id.description_create);
+
+  //property
+  get_id.title_create.type = "text";
+  get_id.description_create.type = "text";
+  get_id.title_create.id = "input_title"
+  get_id.description_create.id = "input_description";
+
+}
+
 
 //https://sangminem.tistory.com/284
