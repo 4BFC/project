@@ -1,6 +1,7 @@
 //https://ko.javascript.info/fetch
 
-let fetch_test = fetch('./data.json')
+let fetch_test = fetch("./data.dat")
+  //index.html에부착이 되었을 때는 data.json의 위치가 html기준으로 파싱을 한다.
   .then(res => res.json())
   .then(res => {
     // console.log(res);
