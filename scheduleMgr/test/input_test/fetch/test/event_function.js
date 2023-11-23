@@ -11,7 +11,8 @@ export let addBtn = () => {
     hidden_num.value = random;
 
     // Fetch를 사용하여 데이터 전송
-    //https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch
+    //https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch -> fetch의 기본 사용법
+    //https://developer.mozilla.org/ko/docs/Web/API/fetch -> fetch의 매개변수 등, API용어
     fetch('process_data.php', {
       method: 'POST',
       body: new URLSearchParams({
