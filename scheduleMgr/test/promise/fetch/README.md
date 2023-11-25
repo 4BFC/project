@@ -13,3 +13,7 @@ response.arrayBuffer() – 응답을 ArrayBuffer(바이너리 데이터를 로�
 
 - [json정리 및 사용 ]{https://velog.io/@ym1085/JSON-%EC%82%AC%EC%9A%A9%EB%B2%95}
 - [fetch 세부 프로퍼티와 헤더]{https://ko.javascript.info/fetch}
+
+#DOM tree 그리고 import
+
+import문을 사용해서 js파일을 script태그를 사용해서 html에 부착할 시에 DOM tree를 생각해서 위치를 어떻게 두느냐에 따라 html이 파싱을 하는 순서가 달라 질 것이다.
