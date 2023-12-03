@@ -1,0 +1,1 @@
+export let fetch_btn = document.querySelector('#fetch_btn');

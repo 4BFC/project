@@ -14,6 +14,10 @@ response.arrayBuffer() – 응답을 ArrayBuffer(바이너리 데이터를 로�
 - [json정리 및 사용 ]{https://velog.io/@ym1085/JSON-%EC%82%AC%EC%9A%A9%EB%B2%95}
 - [fetch 세부 프로퍼티와 헤더]{https://ko.javascript.info/fetch}
 
-#DOM tree 그리고 import
+# DOM tree 그리고 import
 
 import문을 사용해서 js파일을 script태그를 사용해서 html에 부착할 시에 DOM tree를 생각해서 위치를 어떻게 두느냐에 따라 html이 파싱을 하는 순서가 달라 질 것이다.
+
+# 비동기
+- 비동기를 더욱 깊게 파고 들면서 비동기는 단순히 서버 데이터를 입출력할 때 새로고침을 하지 않고 사용할 수 있다는 것이다. 즉, 이미지를 로딩해 올 때 로딩하지 않고 바로 가지고 올 수 있다는 것이다. 결과적으로 SPA와 같은 모습이 나온다는 것이다.
+- 비동기는 새로고침을 생각하면 되는 것이다.
